@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import API from './movies-api';
+import Navigation from './Components/Navigation/Navigation';
+import { Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navigation />
+
+      <Route path="/">
+        <div>MAIN</div>
+      </Route>
+      <Route path="/movies">
+        <div>MOVIES</div>
+      </Route>
     </div>
   );
 }
