@@ -63,7 +63,7 @@ function MovieDetailsPage() {
                         }}>
                         Reviews
                     </NavLink>
-                    {/* LOADER!!!!!!!!!!!!!!!!!!!!! */}
+                    
                     <Suspense fallback={<h2>LOADING...</h2>}>
                         <Switch>
                             <Route exact path={`/movies/${movieId}/cast`}>
