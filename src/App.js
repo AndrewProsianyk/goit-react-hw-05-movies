@@ -1,12 +1,12 @@
 import { Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Navigation from './Components/Navigation/Navigation';
+import './App.module.css'
 
-
-const HomePage = lazy(() => import('./Views/HomePage'))
-const MovieDetailsPage = lazy(()=>import('./Views/MovieDetailsPage'))
-const MoviesPage = lazy(()=>import('./Views/MoviesPage'))
-const NotFoundView = lazy(()=>import('./Views/NotFoundView'))
+const HomePage = lazy(() => import('./Views/HomePage' /* webpackChunkName: "HomePage"*/))
+const MovieDetailsPage = lazy(()=>import('./Views/MovieDetailsPage' /* webpackChunkName: "MovieDetailsPage"*/))
+const MoviesPage = lazy(()=>import('./Views/MoviesPage' /* webpackChunkName: "MoviesPage"*/))
+const NotFoundView = lazy(()=>import('./Views/NotFoundView' /* webpackChunkName: "NotFoundView"*/))
 
 function App() {
   return (

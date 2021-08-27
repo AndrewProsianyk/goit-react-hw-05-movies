@@ -1,0 +1,26 @@
+.castList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.actorCard {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+img {
+  margin-bottom: 7px;
+}
+.actorName {
+  font-size: 22px;
+  font-weight: 500;
+  color: black;
+}
+.actorCard:hover {
+  background-color: rgba(255, 22, 0, 0.7);
+  /* border: 1px solid rgb(184, 183, 183); */
+  box-shadow: 0px 6px 19px 4px rgba(255, 22, 0, 0.5);
+}

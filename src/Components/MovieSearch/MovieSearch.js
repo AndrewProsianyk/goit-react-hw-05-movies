@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import { useState } from 'react';
+import styles from './MovieSearch.module.css'
 
 function MovieSearch({onSubmit}) {
     const [searchQuery, setSearchQuery] = useState('')
@@ -17,14 +18,19 @@ function MovieSearch({onSubmit}) {
     }
 
     return(
-        <form onSubmit={formSubmit}>
+        <form
+            className={styles.searchForm}
+            onSubmit={formSubmit}>
             <input
+                className={styles.formInput}
                 type="text"
                 placeholder="Search a movie"
                 value={searchQuery}
                 onChange={inputChange}
             />
-            <button type='submit'>Search</button>
+            <button
+                className={styles.formButton}
+                type='submit'>GO</button>
         </form>
     )
 }

@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import {IMG} from '../../movies-api'
-
+import styles from './MoviesList.module.css'
 
 const MoviesList = ({ movies }) => {
     const location = useLocation()
     return (
-        <ul>
+        <ul className={styles.moviesList}>
             {movies.map(movie => (
-                <li key={movie.id}>
+                <li className={styles.movieCard} key={movie.id}>
                     <Link to={{
                         pathname: `/movies/${movie.id}`,
                         state: { from: location }
                     }}>
                     <img src={IMG+movie.poster_path} alt={movie.title} />
-                    <span>{movie.title}{movie.name}</span>
+                    <span className={styles.movieName}>{movie.title}{movie.name}</span>
                     </Link>
                 </li>
             ))}

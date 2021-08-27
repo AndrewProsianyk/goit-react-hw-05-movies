@@ -1,0 +1,54 @@
+.goBackButton {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  color: red;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgb(63, 63, 63);
+  margin-bottom: 20px;
+}
+.goBackButton:hover {
+  background-color: gray;
+  color: white;
+}
+.movieCard {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.movie {
+  display: flex;
+  margin-bottom: 40px;
+}
+.movieInfo {
+  margin-left: 60px;
+}
+.movieInfo p {
+  margin: 0px;
+  font-size: 24px;
+}
+.movieInfo p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 32px;
+  margin: 0px 0px 20px;
+}
+
+.link {
+  display: inline-flex;
+  height: 20px;
+  font-size: 26px;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+.link:not(:last-child) {
+  margin-right: 30px;
+}
+.linkActive {
+  composes: link;
+  color: red;
+}

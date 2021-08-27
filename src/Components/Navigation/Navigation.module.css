@@ -1,0 +1,23 @@
+.navBar {
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: rgb(63, 63, 63);
+  color: white;
+  margin-bottom: 20px;
+  padding: 20px 50px;
+}
+.link {
+  display: inline-flex;
+  height: 20px;
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+}
+.link:not(:last-child) {
+  margin-right: 30px;
+}
+.linkActive {
+  composes: link;
+  color: red;
+}

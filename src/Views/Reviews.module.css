@@ -1,0 +1,14 @@
+p {
+  margin: 0px;
+}
+.reviewItem:not(:last-child) {
+  margin-bottom: 30px;
+}
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.review {
+  font-size: 18px;
+}
