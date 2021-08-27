@@ -1,18 +1,34 @@
-import API from './movies-api';
+import { Route, Switch } from 'react-router-dom';
 import Navigation from './Components/Navigation/Navigation';
-import { Route } from 'react-router-dom';
+import HomePage from './Views/HomePage';
+import MovieDetailsPage from './Views/MovieDetailsPage';
+import NotFoundView from './Views/NotFoundView';
+import MoviesPage from './Views/MoviesPage';
+
+// import MoviesPage from './Views/MoviesPage'
 
 function App() {
   return (
     <div>
       <Navigation />
 
-      <Route path="/">
-        <div>MAIN</div>
-      </Route>
-      <Route path="/movies">
-        <div>MOVIES</div>
-      </Route>
+      <Switch>
+        <Route path="/" exact>
+          <HomePage />
+        </Route>
+
+        <Route path="/movies" exact>
+          <MoviesPage/>
+        </Route>
+
+        <Route path="/movies/:movieId">
+          <MovieDetailsPage />
+        </Route>
+
+        <Route>
+          <NotFoundView />
+        </Route>
+      </Switch>
     </div>
   );
 }
